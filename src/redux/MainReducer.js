@@ -1,9 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { InitialState } from "./InitialState";
 
+
+const initialState = {
+    ...InitialState,
+    token: localStorage.getItem('token') || '',
+  };
+
 export const MainReducer = createSlice({
     name : 'MAIN_SLICE',
-    initialState : InitialState,
+    initialState : initialState,
     reducers:{
         changeStateValue: (state, action) => {
             console.log(action);

@@ -1,3 +1,8 @@
 export const InitialState = {
-    token : ''
+    token : '',
+    tableDetail : {},
+    tables : [],
+    tableCategories : [],
+    restaurants : [],
+    restaurant : {}
 }
